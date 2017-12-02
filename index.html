@@ -27,9 +27,9 @@
             </li>
           </ul>
 
-          <form class="form-inline my-2 my-lg-0">
+          <form class="form-inline my-2 my-lg-0" id="form-login-nav">
             <input class="form-control mr-sm-2" id="input-user" type="input" placeholder="Enter user" aria-label="User">
-            <button class="btn btn-light my-2 my-sm-0" type="submit">Login</button>
+            <button class="btn btn-light my-2 my-sm-0" type="submit" onclick="login()">Login</button>
           </form>
 
         </div>
@@ -42,17 +42,17 @@
           <div class="col-4 offset-md-6">
               <span>test block 2</span>
 
-              <form class="my-5 py-3 px-3 text-dark bg-light rounded" action="" method="post">
+              <form class="my-5 py-3 px-3 text-dark bg-light rounded" id="form-login-body">
                 <div class="form-group">
                   <label for="input-user-form">User name</label>
                   <input type="text" class="form-control" id="input-user-form" aria-describedby="user-help" placeholder="Enter user name">
                   <small id="user-help" class="form-text text-muted">Enter your previously registered user name</small>
                 </div>
-                <button type="submit" class="btn btn-primary">Login</button>
+                <button type="submit" class="btn btn-primary" onclick="login()">Login</button>
               </form>
 
 
-              <form class="my-5 py-3 px-3 text-dark bg-light rounded" action="" method="post">
+              <form class="my-5 py-3 px-3 text-dark bg-light rounded" id="form-register-body">
                 <div class="form-group form-text justify-content-start">
                   <label class="">For the first time on Web Chat 2.0?</label>
                   <label class="text-muted">Sign up for Web Chat</label>
@@ -62,7 +62,7 @@
                   <label for="input-new-user-form">Create a user name</label>
                   <input type="text" class="form-control" id="input-new-user-form" aria-describedby="user-help" placeholder="User name">
                 </div>
-                <button type="submit" class="btn btn-success">Sign up</button>
+                <button type="submit" class="btn btn-success" onclick="register()">Sign up</button>
               </form>
             </div>
 
@@ -73,5 +73,6 @@
       <script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
       <script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="assets/js/main.js"></script>
   </body>
 </html>
