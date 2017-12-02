@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Web chat 2.0 - Chat</title>
+    <link rel="icon" href="assets/images/favicon.ico">
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  </head>
+  <body background="assets/images/network-bg.jpg">
+
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-center">
+        <span class="navbar-brand">Web Chat 2.0</span>
+        <span class="nav-link text-dark bg-light rounded mr-2 d-none" id="connected_user">[connected user]</span>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarContent" aria-controls="navbarContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarContent">
+
+          <ul class="navbar nav mr-auto justify-content-start">
+            <li class="nav-item active">
+              <a class="nav-link text-white" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link text-white" href="#">Chat</a>
+            </li>
+          </ul>
+
+          <form class="form-inline my-2 my-lg-0" id="form-login-nav">
+            <input class="form-control mr-sm-2" id="input-user" type="input" placeholder="Enter user" aria-label="User">
+            <button class="btn btn-light my-2 my-sm-0" type="submit" onclick="login()">Login</button>
+          </form>
+
+        </div>
+      </nav>
+
+      <section class="container-fluid">
+
+       <div class="row justify-content-center">
+          <div class="col-12 col-sm-8 col-lg-6 offset">
+
+            <div class="fixed-top my-5">
+              <div class="row justify-content-center">
+                 <div class="col-12 col-sm-8 col-lg-6 offset">
+                    <form class="my-5 py-3 px-3 text-dark bg-transparent rounded" id="form-login-body">
+                      <div class="row">
+                        <div class="col-9">
+                          <textarea class="form-control" id="text-message" rows="3"></textarea>
+                        </div>
+                        <div class="col-3">
+                          <button type="submit" class="btn btn-primary form-control" onclick="">Enviar</button>
+                        </div>
+                      </div>
+                      <!--
+                      <div class="form-group justify-content-end">
+                        <textarea class="form-control" id="text-message" rows="3"></textarea>
+
+                        <button type="submit" class="btn btn-primary" onclick="">Enviar</button>
+                      -->
+
+                    </form>
+                </div>
+              </div>
+            </div>
+
+
+
+              <form class="mt-5 py-3 px-3 text-dark bg-light rounded" id="form-register-body">
+                <div class="form-group form-text justify-content-start">
+                  <label class="">For the first time on Web Chat 2.0?</label>
+                  <label class="text-muted">Sign up for Web Chat</label>
+                </div>
+
+                <div class="form-group">
+                  <label for="input-new-user-form">Create a user name</label>
+                  <input type="text" class="form-control" id="input-new-user-form" aria-describedby="user-help" placeholder="User name">
+                </div>
+                <button type="submit" class="btn btn-success" onclick="register()">Sign up</button>
+              </form>
+
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+              <label for="">teste</label>
+            </div>
+
+        </div>
+
+      </section>
+
+      <script type="text/javascript" src="assets/js/jquery-3.2.1.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+      <script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
+      <script type="text/javascript" src="assets/js/main.js"></script>
+  </body>
+</html>
