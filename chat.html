@@ -5,10 +5,11 @@
     <title>Web chat 2.0 - Chat</title>
     <link rel="icon" href="assets/images/favicon.ico">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/chat.css">
   </head>
   <body background="assets/images/network-bg.jpg">
 
-      <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-center">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark justify-content-center fixed-top">
         <span class="navbar-brand">Web Chat 2.0</span>
         <span class="nav-link text-dark bg-light rounded mr-2 d-none" id="connected_user">[connected user]</span>
 
@@ -43,22 +44,18 @@
             <div class="fixed-top my-5">
               <div class="row justify-content-center">
                  <div class="col-12 col-sm-8 col-lg-6 offset">
-                    <form class="my-5 py-3 px-3 text-dark bg-transparent rounded" id="form-login-body">
+                    <form class="mt-5 py-3 px-3 text-dark rounded bg-light" id="form-message">
                       <div class="row">
-                        <div class="col-9">
+                        <div class="col-1">
+                          <span data-letters="MA" id="user-initial"></span>
+                        </div>
+                        <div class="col-8">
                           <textarea class="form-control" id="text-message" rows="3"></textarea>
                         </div>
                         <div class="col-3">
                           <button type="submit" class="btn btn-primary form-control" onclick="">Enviar</button>
                         </div>
                       </div>
-                      <!--
-                      <div class="form-group justify-content-end">
-                        <textarea class="form-control" id="text-message" rows="3"></textarea>
-
-                        <button type="submit" class="btn btn-primary" onclick="">Enviar</button>
-                      -->
-
                     </form>
                 </div>
               </div>
@@ -66,7 +63,7 @@
 
 
 
-              <form class="mt-5 py-3 px-3 text-dark bg-light rounded" id="form-register-body">
+              <form class="py-3 px-3 text-dark bg-light rounded extra-margin-top-10" id="form-register-body">
                 <div class="form-group form-text justify-content-start">
                   <label class="">For the first time on Web Chat 2.0?</label>
                   <label class="text-muted">Sign up for Web Chat</label>
