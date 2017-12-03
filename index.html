@@ -5,6 +5,7 @@
     <title>Web chat 2.0</title>
     <link rel="icon" href="assets/images/favicon.ico">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/chat.css">
   </head>
   <body background="assets/images/network-bg.jpg">
 
@@ -29,13 +30,13 @@
 
           <form class="form-inline my-2 my-lg-0" id="form-login-nav">
             <input class="form-control mr-sm-2" id="input-user" type="input" placeholder="Enter user" aria-label="User">
-            <button class="btn btn-light my-2 my-sm-0" type="submit" onclick="login()">Login</button>
+            <button class="btn btn-light my-2 my-sm-0" id="input-button" type="submit" onclick="login()">Login</button>
           </form>
 
         </div>
       </nav>
 
-      <section class="container-fluid">
+      <section class="container-fluid" id="main">
 
        <div class="row justify-content-center">
 
@@ -74,5 +75,6 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
       <script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
       <script type="text/javascript" src="assets/js/main.js"></script>
+      <script type="text/javascript" src="assets/js/chat.js"></script>
   </body>
 </html>

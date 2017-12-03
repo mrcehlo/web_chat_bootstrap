@@ -1,5 +1,6 @@
 var input_user = "";
 var connected_user = "";
+var connected_user_initial = "";
 
 $("#form-login-body, #form-login-nav, #form-register-body").submit(function(e) {
     e.preventDefault();
@@ -26,7 +27,7 @@ function start_next_action(nextActionType, data){
     // load page
     // sucess message
     if(data.length > 21){
-
+      load_chat_page();
     }
   }
   else if(nextActionType == "register"){
@@ -46,6 +47,7 @@ function start_next_action(nextActionType, data){
 
 function load_chat_page(data){
   // Load chat page
+  load_send_message_painel();
 }
 
 function show_request_error(data) {
