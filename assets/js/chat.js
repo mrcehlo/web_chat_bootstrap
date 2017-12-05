@@ -76,3 +76,15 @@ function get_user_initial(user_params) {
     return user_params[0] + user_params[user_params.length - 1];
   }
 }
+
+function send_message() {
+  var user_message = $('#text-message').val();
+  $('#text-message').val("");
+  // http://www.angelito.com.br/webchat/send?nickname=t&textmsg=t
+  $.post("http://www.angelito.com.br/webchat/send?nickname=" + input_user + "&textmsg=" + user_message, function () {
+      load_messages_from_server();
+  })
+    .fail(function (data) {
+       show_request_error(data);
+    });
+}

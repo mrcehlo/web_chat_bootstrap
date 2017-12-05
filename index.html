@@ -28,7 +28,7 @@
             </li>
           </ul>
 
-          <form class="form-inline my-2 my-lg-0" id="form-login-nav">
+          <form class="form-inline my-2 my-lg-0 disable-default-submit" id="form-login-nav">
             <input class="form-control mr-sm-2" id="input-user" type="input" placeholder="Enter user" aria-label="User">
             <button class="btn btn-light my-2 my-sm-0" id="input-button" type="submit" onclick="login()">Login</button>
           </form>
@@ -41,9 +41,8 @@
        <div class="row justify-content-center">
 
           <div class="col-4 offset-md-6">
-              <span>test block 2</span>
 
-              <form class="my-5 py-3 px-3 text-dark bg-light rounded" id="form-login-body">
+              <form class="my-5 py-3 px-3 text-dark bg-light rounded disable-default-submit" id="form-login-body">
                 <div class="form-group">
                   <label for="input-user-form">User name</label>
                   <input type="text" class="form-control" id="input-user-form" aria-describedby="user-help" placeholder="Enter user name">
@@ -53,7 +52,7 @@
               </form>
 
 
-              <form class="my-5 py-3 px-3 text-dark bg-light rounded" id="form-register-body">
+              <form class="my-5 py-3 px-3 text-dark bg-light rounded disable-default-submit" id="form-register-body">
                 <div class="form-group form-text justify-content-start">
                   <label class="">For the first time on Web Chat 2.0?</label>
                   <label class="text-muted">Sign up for Web Chat</label>
@@ -76,5 +75,6 @@
       <script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
       <script type="text/javascript" src="assets/js/main.js"></script>
       <script type="text/javascript" src="assets/js/chat.js"></script>
+      
   </body>
 </html>

@@ -2,9 +2,13 @@ var input_user = "";
 var connected_user = "";
 var connected_user_initial = "";
 
-$("#form-login-body, #form-login-nav, #form-register-body").submit(function(e) {
+$(".disable-default-submit").submit(function(e) {
     e.preventDefault();
 });
+/*
+$("#form-login-body, #form-login-nav, #form-register-body").submit(function(e) {
+    e.preventDefault();
+});*/
 
 // Validate user input from navbar as well as from the main form in the center of screen
 function get_user_input(){
@@ -52,7 +56,7 @@ function load_chat_page(data){
 
 function show_request_error(data) {
   // Show error
-  alert('erro');
+  alert('erro ' + data);
 }
 
 function login() {
