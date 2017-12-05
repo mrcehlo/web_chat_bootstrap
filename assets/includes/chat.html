@@ -1,34 +1,44 @@
- <div class="row justify-content-center">
-    <div class="col-12 col-sm-8 col-lg-6 offset">
 
-      <div class="fixed-bottom">
-        <div class="row justify-content-center">
-           <div class="col-12 col-sm-8 col-lg-6 offset">
-              <form class="mt-5 py-3 px-3 text-dark rounded bg-secondary disable-default-submit" id="form-message">
-                <div class="row">
-                  <div class="col-1 mr-1 mr-sm-2">
-                    <span data-letters="" class="user-initial" id="user-initial"></span>
-                  </div>
-                  <div class="col-7 ml-2 ml-sm-2">
-                    <textarea class="form-control" id="text-message" rows="3"></textarea>
-                  </div>
-                  <div class="col-3">
-                    <button class="btn btn-light" onclick="send_message()">Enviar</button>
-                  </div>
-                </div>
-              </form>
-              <script type="text/javascript">
-                  $(".disable-default-submit").submit(function(e) {
-                      e.preventDefault();
-                  });
-              </script>
+
+<div class="row justify-content-start">
+
+       <div class="mr-5 mt-1 col-2 d-none d-sm-block d-lg-block">
+         <div class="list-group">
+           <span class="list-group-item-light text-center">Connected users</span>
+           <span class="list-group-item" data-letters="UK"></span>
+           <span class="list-group-item" data-letters="UK"></span>
+           <span class="list-group-item" data-letters="UK"></span>
+         </div>
+       </div>
+
+       <div class="col-12 col-sm-8 col-lg-6 offset">
+          <div class="extra-margin-bottom col-12" id="all-messages-container">
+
           </div>
-        </div>
-      </div>
+       </div>
+</div>
 
-      <div class="extra-margin-bottom-10" id="all-messages-container">
-
-      </div>
-
+<div class="fixed-bottom">
+  <div class="row">
+     <div class="col-12 rounded bg-secondary">
+        <form class="py-3 px-3 text-dark disable-default-submit" id="form-message">
+          <div class="row justify-content-center">
+            <div class="col-1 mr-1 mr-sm-2">
+              <span data-letters="" class="user-initial" id="user-initial"></span>
+            </div>
+            <div class="col-7 ml-2 ml-sm-2">
+              <input class="form-control" id="text-message"></input>
+            </div>
+            <div class="col-3">
+              <button class="btn btn-light" onclick="send_message()">Enviar</button>
+            </div>
+          </div>
+        </form>
+        <script type="text/javascript">
+            $(".disable-default-submit").submit(function(e) {
+                e.preventDefault();
+            });
+        </script>
     </div>
   </div>
+</div>
