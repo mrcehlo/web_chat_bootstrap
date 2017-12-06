@@ -8,6 +8,8 @@ function load_send_message_painel() {
   // Inject chat.html
    $("#main").load("/assets/includes/chat.html", function() {
       $("#user-initial").attr("data-letters", connected_user_initial.toUpperCase());
+
+      load_connected_users_list();
       // Load all load all messages
       load_messages_from_server();
    });
@@ -83,6 +85,33 @@ function send_message() {
   // http://www.angelito.com.br/webchat/send?nickname=t&textmsg=t
   $.post("http://www.angelito.com.br/webchat/send?nickname=" + input_user + "&textmsg=" + user_message, function () {
       load_messages_from_server();
+  })
+    .fail(function (data) {
+       show_request_error(data);
+    });
+}
+
+function load_connected_users_list() {
+  // http://www.angelito.com.br/webchat/users
+  $.getJSON("http://www.angelito.com.br/webchat/users", function (data) {
+      // Clean previous html
+      $("#connected-users-list").empty();
+
+      var connected_user_list = document.getElementById("connected-users-list");
+      var span = document.createElement("span");
+      span.className = "list-group-item-light text-center";
+      span.innerHTML = "Connected users";
+      connected_user_list.appendChild(span);
+
+      for (var i = 0; i < data.length; i++) {
+          var span2 = document.createElement("span");
+          span2.className = "list-group-item";
+          span2.innerHTML = data[i];
+          span2.setAttribute("data-letters", get_user_initial(data[i]).toUpperCase())
+          connected_user_list.appendChild(span2);
+      }
+
+      //load_single_message(null, data, 0);
   })
     .fail(function (data) {
        show_request_error(data);
